@@ -32,22 +32,6 @@ public class MySort {
     }
 
 
-    /**
-     * 直接插入排序
-     * 一副牌，总是从右往前比
-     */
-    static void insertSort(int arr[]){
-        //n-1趟扫描，依次向前插入n-1个数
-        for(int i=1;i<arr.length;i++){
-            int last = arr[i],j;
-            //最后一张牌固定，左边的牌从右至左逐个与last比较,大的右移
-            for(j = i; j>0 && arr[j-1] > last; j--){
-                arr[j]=arr[j-1]; //大的右移
-            }
-            arr[j]=last;
-        }
-        showArray(arr);
-    }
 
 
     /**
@@ -71,13 +55,13 @@ public class MySort {
     /**
      * 快速排序
      */
-    static int meidan3(int arr[],int left,int right){
+    static int meidan3(int[] arr,int left,int right){
         //返回三取样中位数
         int center = (left+right)/2;
         if(arr[left]>arr[center]) swap(arr,left,center);
         if(arr[left]>arr[right]) swap(arr,left,right);
         if(arr[center]>arr[right]) swap(arr,center,right);
-        swap(arr,center,right-1); /* 将中位数放到导数第二个位置，只需要考虑A[Left+1] … A[Right-2] */
+        swap(arr,center,right-1); /* 将中位数放到倒数第二个位置，只需要考虑A[Left+1] … A[Right-2] */
         showArray(arr);
         return arr[right-1]; /* 返回基准Pivot */
     }

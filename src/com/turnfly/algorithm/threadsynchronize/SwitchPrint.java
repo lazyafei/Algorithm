@@ -1,5 +1,7 @@
 package com.turnfly.algorithm.threadsynchronize;
 
+import java.util.concurrent.Semaphore;
+
 public class SwitchPrint implements Runnable{
     private static int tmp = 0;
     Object o = new Object();

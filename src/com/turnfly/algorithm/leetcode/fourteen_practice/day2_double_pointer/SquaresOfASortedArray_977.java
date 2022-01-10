@@ -4,6 +4,7 @@ package com.turnfly.algorithm.leetcode.fourteen_practice.day2_double_pointer;
 import com.turnfly.algorithm.CommonUtil;
 
 import java.util.Arrays;
+import java.util.Comparator;
 
 /**
  * Given an integer array nums sorted in non-decreasing order, return an array of the squares of each number sorted in non-decreasing order.
@@ -31,19 +32,34 @@ import java.util.Arrays;
  * */
 public class SquaresOfASortedArray_977 {
 
+    /**
+     * 1、暴力法
+     * */
     public static int[] sortedSquares(int[] nums) {
         int[] square_nums = new int[nums.length];
         int i = 0;
         for(int n : nums){
             square_nums[i++] = (int)Math.pow(n,2.0);
         }
-        //Arrays.sort(a,Collections.reverseOrder()) 不支持基本类型(int，double，char等)
+
+        //不支持基本类型(int，double，char等)
+        //Collections.reverseOrder()
+        //Comparator.reverseOrder()
         Arrays.sort(square_nums);
         //, Comparator.naturalOrder()
         return square_nums;
     }
 
 
+
+    /**
+     * 2、双指针
+     * */
+    public static int[] sortedSquares2(int[] nums) {
+
+
+        return null;
+    }
 
 
 

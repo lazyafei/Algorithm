@@ -1,6 +1,6 @@
 package com.turnfly.algorithm.leetcode;
 
-import java.util.Stack;
+import java.util.*;
 
 public class Practice {
 
@@ -134,5 +134,29 @@ public class Practice {
         return stack.isEmpty();
     }
 
+
+
+    /*
+        abcabcabc
+     */
+    public static int lengthOfLongestSubString(String s){
+        if(s == null || s.length() == 0) return 0;
+        char[] arr = s.toCharArray();
+        int l = 0, r = -1;
+        int res = 0;
+        ArrayList<Character> subList = new ArrayList<>();
+        while(l < s.length()){
+            if(r+1<s.length()){
+                if(subList.contains(arr[r+1])){
+                    subList.remove(l++);
+                    continue;
+                }
+                subList.add(arr[++r]);
+                res = Math.max(res,subList.size());
+            }
+        }
+
+        return res;
+    }
 
 }

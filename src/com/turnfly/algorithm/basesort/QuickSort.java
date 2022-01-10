@@ -1,4 +1,4 @@
-package com.turnfly.algorithm.practice;
+package com.turnfly.algorithm.basesort;
 
 
 import com.turnfly.algorithm.CommonUtil;

@@ -1,4 +1,4 @@
-package com.turnfly.algorithm.basepractice;
+package com.turnfly.algorithm.practice;
 
 public class gcd {
     public static int gcd(int p,int q){

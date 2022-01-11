@@ -1,4 +1,4 @@
-package com.turnfly.algorithm.leetcode.recursionandbacktracking;
+package com.turnfly.algorithm.practice.recursionandbacktracking;
 
 import java.util.ArrayList;
 import java.util.List;

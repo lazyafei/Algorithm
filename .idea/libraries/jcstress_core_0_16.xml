@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="jcstress-core-0.16">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/src/com/turnfly/algorithm/jar/jcstress-core-0.16.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

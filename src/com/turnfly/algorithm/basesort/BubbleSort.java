@@ -1,6 +1,6 @@
 package com.turnfly.algorithm.basesort;
 
-import static com.turnfly.algorithm.CommonUtil.*;
+import static com.turnfly.algorithm.utils.CommonUtil.*;
 
 public class BubbleSort {
 
@@ -9,7 +9,7 @@ public class BubbleSort {
      * 时间复杂度O(n^2)
      * */
     static void bubbleSort(int arr[]) {
-        //arr[n-i,n)已经排好序，通过冒泡在arr[n-i-1]位置上放上合适的元素
+        //arr[n - i, n)已经排好序，通过冒泡在arr[n - i - 1]位置上放上合适的元素
         for (int i = 0; i < arr.length - 1; i++) {
             for (int j = 0; j < arr.length - i - 1; j++) {
                 if (arr[j] > arr[j + 1]) {

@@ -1,7 +1,8 @@
 package com.turnfly.algorithm.basesort;
 
 
-import com.turnfly.algorithm.CommonUtil;
+import com.turnfly.algorithm.utils.ColorEnum;
+import com.turnfly.algorithm.utils.CommonUtil;
 
 public class QuickSort {
     static int getPivot(int[] arr,int l,int r){
@@ -42,13 +43,33 @@ public class QuickSort {
         }
     }
 
+    static void qs(int[] arr, int i, int j) {
+        if(i >= j) return;
+        int l = i, r = j;
+        CommonUtil.swap(arr, i, i + ((j - i) >> 1));
+        while (l < r) {
+            while (l < r && arr[r] >= arr[i]) r--;
+            while (l < r && arr[l] <= arr[i]) l++;
+
+            if (l < r) {
+                CommonUtil.swap(arr, l, r);
+            }
+            CommonUtil.showArray_colors(arr, arr[i]);
+        }
+
+        CommonUtil.swap(arr, i, l);
+        qs(arr, i, l - 1);
+        qs(arr, l + 1, j);
+    }
+
     public static void main(String[] args) {
         int[] arr =new int[]{4,1,3,7,2,5,8,9,6};
+        System.out.println("initial array: ");
+        CommonUtil.showArray(arr);
        // int[] arr =new int[]{1,0};
-        quickSort(arr,0,arr.length-1);
-        System.out.print("final result: ");
-        int a = 1;
-
+        //quickSort(arr,0,arr.length-1);
+        qs(arr,0,arr.length-1);
+        System.out.println("final result: ");
         CommonUtil.showArray(arr);
     }
 }

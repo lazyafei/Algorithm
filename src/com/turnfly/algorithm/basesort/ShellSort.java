@@ -1,6 +1,6 @@
 package com.turnfly.algorithm.basesort;
 
-import com.turnfly.algorithm.CommonUtil;
+import com.turnfly.algorithm.utils.CommonUtil;
 
 /**希尔排序 - 缩小增量排序
  * 又称分组的直接插入排序，缩小增量排序,是直接插入排序的改进方法（直接插入排序只交换相邻元素，只能消去一个逆序对）

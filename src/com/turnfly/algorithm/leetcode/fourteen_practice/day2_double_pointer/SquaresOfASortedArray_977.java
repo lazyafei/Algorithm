@@ -1,10 +1,9 @@
 package com.turnfly.algorithm.leetcode.fourteen_practice.day2_double_pointer;
 
 
-import com.turnfly.algorithm.CommonUtil;
+import com.turnfly.algorithm.utils.CommonUtil;
 
 import java.util.Arrays;
-import java.util.Comparator;
 
 /**
  * Given an integer array nums sorted in non-decreasing order, return an array of the squares of each number sorted in non-decreasing order.
